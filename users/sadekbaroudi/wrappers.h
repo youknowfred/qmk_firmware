@@ -51,6 +51,11 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #    define LAYOUT LAYOUT_barobord
 #endif
 
+// Since barobord_byomcu uses the name LAYOUT_barobord_byomcu instead of LAYOUT
+#if (!defined(LAYOUT) && defined(LAYOUT_barobord_byomcu))
+#    define LAYOUT LAYOUT_barobord_byomcu
+#endif
+
 // Since barobord uses the name LAYOUT_barobord instead of LAYOUT
 #if (!defined(LAYOUT) && defined(LAYOUT_ortho_4x12))
 #    define LAYOUT LAYOUT_ortho_4x12
@@ -129,6 +134,11 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 // Since badwings uses the name LAYOUT_badwings instead of LAYOUT
 #if (!defined(LAYOUT) && defined(LAYOUT_fflx))
 #    define LAYOUT LAYOUT_fflx
+#endif
+
+// Since KLOR uses the name LAYOUT_polydactyl instead of LAYOUT
+#if (!defined(LAYOUT) && defined(LAYOUT_saegewerk))
+#    define LAYOUT LAYOUT_saegewerk
 #endif
 
 
@@ -348,7 +358,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define __SHIFTNAV_1_K2__ LSFT(KC_PGUP)
 #define __SHIFTNAV_1_K3__ LSFT(KC_UP)
 #define __SHIFTNAV_1_K4__ LSFT(KC_PGDN)
-#define __SHIFTNAV_1_K5__ EEP_RST
+#define __SHIFTNAV_1_K5__ EE_CLR
 
 #define __SHIFTNAV_2_K1__ LSFT(KC_HOME)
 #define __SHIFTNAV_2_K2__ LSFT(KC_LEFT)
@@ -476,7 +486,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define __AMOUSE_2_K4_ KC_BTN1
 #define __AMOUSE_2_K5_ KC_MS_WH_RIGHT
 
-#define __AMOUSE_3_K1_ EEP_RST
+#define __AMOUSE_3_K1_ EE_CLR
 #define __AMOUSE_3_K2_ KC_MS_WH_UP
 #define __AMOUSE_3_K3_ KC_MS_WH_DOWN
 #define __AMOUSE_3_K4_ KC_MS_ACCEL1
@@ -494,6 +504,12 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________KICAD_2_________________     LCTL_T(KC_X),       LGUI_T(KC_END),     LALT_T(KC_E),      LSFT_T(KC_M),       KC_B
 //                                                      Undo                Redo                Rotate             Add Via             Front<->Back
 #define ___________________KICAD_3_________________     LCTL(KC_X),         LCTL(KC_Y),         KC_R,              LCTL(LSFT(KC_V)),   KC_V
+
+// Shortcuts for general kicad aliases
+#define M_KI_SEL_TR KC_U
+#define M_KI_MV     KC_M
+#define M_KI_MVREL  LSFT(KC_P)
+
 #define __KICAD_R0_L__ KC_ESC
 #define __KICAD_R1_L__ KC_TAB            // Drag free angl
 #define __KICAD_R2_L__ LCTL(KC_C)        // Copy
@@ -507,7 +523,8 @@ NOTE: These are all the same length.  If you do a search/replace
 #define __KICAD_TH_R__ LSFT(KC_DEL)      // Delete track, note that this only deletes the current copper line up to pads or vias
 #define __KICAD_R4_1__ __KICAD_R3_R__
 #define __KICAD_R4_2__ LALT(KC_3)        // 3D Viewer
-#define __KICAD_R4_3__ KC_U              // Select track, double press for all connected... // used to be this --> LCTL(KC_E)        // Edit Footprint
+#define __KICAD_R4_3__ M_KI_SEL_TR       // Select track, double press for all connected... // used to be this --> LCTL(KC_E)        // Edit Footprint
+
 
 #define ___________________GAMES_0_________________     KC_F1,   KC_F2,   KC_C,    KC_V,    KC_G
 #define ___________________GAMES_1_________________     KC_Q,    KC_W,    KC_E,    KC_R,    KC_D

@@ -22,7 +22,8 @@
     || defined(KEYBOARD_fingerpunch_rockon_bp) \
     || defined(KEYBOARD_fingerpunch_sweeeeep) \
     || defined(KEYBOARD_fingerpunch_ximi) \
-    || defined(KEYBOARD_fingerpunch_personal_badwings)
+    || defined(KEYBOARD_fingerpunch_personal_badwings) \
+    || defined(KEYBOARD_fingerpunch_personal_klor)
 #    define PLACEHOLDER_SAFE_RANGE FP_SAFE_RANGE
 #elif defined(KEYMAP_SAFE_RANGE)
 #    define PLACEHOLDER_SAFE_RANGE KEYMAP_SAFE_RANGE
@@ -36,6 +37,9 @@ enum userspace_custom_keycodes {
     KC_RGB_BLT,                     // Toggles RGB Base Layer Override mode
     RGB_IDL,                        // RGB Idling animations
     KC_MAKE,                        // Run keyboard's customized make command
+    M_KI_R_SWAP,
+    M_KI_R_ANGLE,
+    M_KI_R_FREE,
     L_GREP,
     L_FIND,
     L_GITCOMMIT,

@@ -49,7 +49,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     }
     switch (keycode) {
 #ifndef FP_DISABLE_CUSTOM_KEYCODES
-        case KC_CAPSLOCK:
+        case KC_CAPS_LOCK:
             if (record->event.pressed) {
                 fp_caps_lock_toggle();
             }
@@ -60,6 +60,15 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                     press_super_tab(true);
                 } else {
                     press_super_tab(false);
+                }
+            }
+            break;
+        case FP_SUPER_CTRL_TAB:
+            if (record->event.pressed) {
+                if (get_mods() & MOD_MASK_SHIFT) {
+                    press_super_ctrl_tab(true);
+                } else {
+                    press_super_ctrl_tab(false);
                 }
             }
             break;
