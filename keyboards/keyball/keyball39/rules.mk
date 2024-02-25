@@ -1,5 +1,5 @@
 # MCU name
-MCU = atmega32u4
+MCU = blok
 
 # Bootloader selection
 BOOTLOADER = rp2040
