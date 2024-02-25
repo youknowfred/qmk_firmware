@@ -68,3 +68,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // To squeeze firmware size
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
+
+//Convert MCU
+#ifdef CONVERT_TO_BLOK
