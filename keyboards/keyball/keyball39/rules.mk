@@ -48,4 +48,4 @@ SPACE_CADET_ENABLE = no
 MAGIC_ENABLE = no
 
 # Convert MCU
-CONVERT_TO = blok
+CONVERT_TO=blok
