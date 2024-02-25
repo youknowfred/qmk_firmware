@@ -1,5 +1,5 @@
 # MCU name
-MCU = rp2040
+MCU = RP2040
 
 # Bootloader selection
 BOOTLOADER = rp2040
