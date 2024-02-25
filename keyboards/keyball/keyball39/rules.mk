@@ -1,5 +1,5 @@
 # MCU name
-MCU = rp2040
+MCU = blok
 
 # Bootloader selection
 BOOTLOADER = rp2040
