@@ -21,7 +21,7 @@ SPLIT_KEYBOARD = yes
 
 # Optical sensor driver for trackball.
 POINTING_DEVICE_ENABLE = yes
-POINTING_DEVICE_DRIVER = custom
+POINTING_DEVICE_DRIVER = pmw3360
 SRC += drivers/pmw3360/pmw3360.c
 QUANTUM_LIB_SRC += spi_master.c # Optical sensor use SPI to communicate
 
@@ -29,7 +29,7 @@ QUANTUM_LIB_SRC += spi_master.c # Optical sensor use SPI to communicate
 MOUSEKEY_ENABLE = no
 
 # Enabled only one of RGBLIGHT and RGB_MATRIX if necessary.
-RGBLIGHT_ENABLE = no        # Enable RGBLIGHT
+RGBLIGHT_ENABLE = yes        # Enable RGBLIGHT
 RGB_MATRIX_ENABLE = no      # Enable RGB_MATRIX (not work yet)
 RGB_MATRIX_DRIVER = ws2812
 
